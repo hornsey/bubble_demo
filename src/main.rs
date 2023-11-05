@@ -1,8 +1,7 @@
-fn bubble_sort(arr: &mut [i32]) {
-    let n = arr.len();
-    
-    for i in 0..n {
-        for j in 0..n-i-1 {
+fn bubble_sort<T: PartialOrd>(arr: &mut [T]) {
+    let len = arr.len();
+    for i in 0..len {
+        for j in 0..len-i-1 {
             if arr[j] > arr[j+1] {
                 arr.swap(j, j+1);
             }
@@ -11,10 +10,15 @@ fn bubble_sort(arr: &mut [i32]) {
 }
 
 fn main() {
-    let mut arr = [64, 34, 25, 12, 22, 11, 90];
-    
+    let mut arr = vec![4, 2, 9, 6, 1, 5, 3];
     bubble_sort(&mut arr);
-    
-    println!("排序后的数组: {:?}", arr);
-}
+    println!("{:?}", arr);
 
+    let mut arr2 = vec!['b', 'a', 'd', 'c', 'f', 'e', 'g'];
+    bubble_sort(&mut arr2);
+    println!("{:?}", arr2);
+
+    let mut arr3 = vec!["apple", "banana", "cherry", "durian"];
+    bubble_sort(&mut arr3);
+    println!("{:?}", arr3);
+}
