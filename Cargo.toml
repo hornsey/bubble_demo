@@ -3,6 +3,28 @@ name = "bubble_demo"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "bubble_demo"
+path = "src/bubble.rs"
+
+[[bin]]
+name = "traffic_light"
+path = "src/traffic_light.rs"
+
+[[bin]]
+name = "sum_u32"
+path = "src/sum_u32.rs"
+
+[[bin]]
+name = "print_area0"
+path = "src/print_area0.rs"
+
+[[bin]]
+name = "print_area"
+path = "src/print_area.rs"
+
+
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

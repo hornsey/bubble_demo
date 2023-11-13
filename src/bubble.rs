@@ -9,6 +9,7 @@ fn bubble_sort<T: PartialOrd>(arr: &mut [T]) {
     }
 }
 
+
 fn main() {
     let mut arr = vec![4, 2, 9, 6, 1, 5, 3];
     bubble_sort(&mut arr);
